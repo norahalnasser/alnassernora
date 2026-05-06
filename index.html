@@ -7,67 +7,81 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Noto+Kufi+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --tiffany: #0abab5; --dark: #053b39; }
-        body { font-family: 'Noto Kufi Arabic', sans-serif; background-color: #f8fafc; color: var(--dark); }
+        :root { --tiffany: #0abab5; --dark-teal: #053b39; }
+        body { font-family: 'Noto Kufi Arabic', sans-serif; background-color: #f8fafc; color: var(--dark-teal); }
         .eng { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: white; border-radius: 2rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
-        .hero-gradient { background: linear-gradient(135deg, #0abab5 0%, #053b39 100%); }
-        .img-card { background: #f1f5f9; border-radius: 1rem; overflow: hidden; height: 250px; position: relative; }
-        .img-card img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-section { background: linear-gradient(135deg, var(--tiffany) 0%, var(--dark-teal) 100%); color: white; padding: 100px 20px; text-align: center; position: relative; overflow: hidden; }
+        .card { background: white; border-radius: 2rem; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; transition: 0.4s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--tiffany); }
+        .img-box { background: #f1f5f9; border-radius: 1.5rem; overflow: hidden; height: 300px; width: 100%; display: flex; align-items: center; justify-content: center; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .badge { background: #e2f2f1; color: var(--tiffany); padding: 6px 16px; border-radius: 12px; font-size: 12px; font-weight: 800; display: inline-block; margin-bottom: 1rem; }
     </style>
 </head>
 <body>
 
-    <header class="hero-gradient text-white py-20 px-6 text-center">
-        <div class="eng text-xs font-bold tracking-[0.4em] mb-4 opacity-70">DIGITAL MEDIA PROFESSIONAL</div>
-        <h1 class="text-6xl font-black mb-6">نورة الناصر</h1>
-        <p class="text-xl max-w-2xl mx-auto opacity-90 font-light">خريجة إعلام وصحافة رقمية بمرتبة الشرف الثانية، متخصصة في صناعة الأثر والاتصال الاستراتيجي.</p>
-        
-        <div class="mt-10 inline-block bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
-            <h3 class="eng text-xl font-black italic">Creating Impact with Every Beat</h3>
+    <!-- Header -->
+    <header class="hero-section">
+        <div class="eng text-xs font-bold tracking-[0.4em] mb-4 opacity-70 uppercase">Media & Journalism Professional</div>
+        <h1 class="text-6xl md:text-8xl font-black mb-6">نورة الناصر</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed font-light">
+            خريجة إعلام وصحافة رقمية من جامعة الأميرة نورة بمرتبة الشرف الثانية. صانعة محتوى استراتيجي يترك أثراً مستداماً.
+        </p>
+        <div class="mt-12 bg-white/10 backdrop-blur-md p-8 rounded-3xl inline-block border border-white/20">
+            <h3 class="eng text-2xl font-black mb-2 italic">Creating Impact with Every Beat</h3>
+            <p class="eng text-sm opacity-80">Transforming communication into a strategic force.</p>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-16">
+    <main class="max-w-7xl mx-auto px-6 py-24">
         
-        <!-- قسم المقالات المميزة -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-black mb-8 border-r-4 border-teal-500 pr-4">كتابات صحفية</h2>
-            <div class="glass p-8 border-r-8 border-teal-500">
-                <h3 class="text-2xl font-bold mb-4">رايةٌ لا تُنكس: عن يوم العلم وسارية الدرعية</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">مقال يتناول الرمزية الوطنية للعلم السعودي وتاريخ سارية الدرعية، نُشر في 11 مارس 2026.</p>
-                <div class="flex gap-4">
-                    <span class="bg-teal-50 text-teal-600 px-4 py-1 rounded-full text-xs font-bold">مقالات رأي</span>
-                    <span class="bg-teal-50 text-teal-600 px-4 py-1 rounded-full text-xs font-bold">يوم العلم</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- هيئة السوق المالية -->
+            <section class="card">
+                <div class="badge eng uppercase">CMA Experience</div>
+                <h2 class="text-3xl font-black mb-6">هيئة السوق المالية</h2>
+                <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                    المساهمة في صناعة المحتوى الاستراتيجي وإدارة التواصل الرقمي للتقرير السنوي. استخدام أدوات التحليل المتقدمة لرصد الأداء الإعلامي.
+                </p>
+                <div class="img-box">
+                    <!-- استخدام رابط GitHub المباشر -->
+                    <img src="https://raw.githubusercontent.com/norahalnasser/norahalnasser.github.io/main/cma-1.jfif.jfif" alt="CMA Work">
                 </div>
+            </section>
+
+            <!-- التميز الصحفي -->
+            <section class="card">
+                <div class="badge eng uppercase">Published Content</div>
+                <h2 class="text-3xl font-black mb-6">رايةٌ لا تُنكس</h2>
+                <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                    مقال صحفي متخصص في رمزية العلم السعودي نُشر تزامناً مع "يوم العلم". يعكس المهارات التحريرية والربط الثقافي في المحتوى الرقمي.
+                </p>
+                <div class="img-box">
+                    <img src="https://raw.githubusercontent.com/norahalnasser/norahalnasser.github.io/main/media-forum-1.jfif.jfif" alt="Media Forum">
+                </div>
+            </section>
+
+        </div>
+
+        <!-- قسم المهارات الإضافية -->
+        <section class="mt-20 glass p-12 rounded-[3rem] bg-teal-50/30 text-center">
+            <h3 class="text-2xl font-black mb-8">المهارات والقدرات الرقمية</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-white px-8 py-4 rounded-2xl shadow-sm font-bold">رصد Meltwater</span>
+                <span class="bg-white px-8 py-4 rounded-2xl shadow-sm font-bold">التواصل المؤسسي</span>
+                <span class="bg-white px-8 py-4 rounded-2xl shadow-sm font-bold">إدارة المشاريع الإعلامية</span>
+                <span class="bg-white px-8 py-4 rounded-2xl shadow-sm font-bold">تحليل البيانات الرقمية</span>
             </div>
         </section>
 
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- خبرة هيئة السوق المالية -->
-            <section class="glass p-8">
-                <h3 class="text-2xl font-black mb-6">هيئة السوق المالية</h3>
-                <p class="text-gray-600 mb-8 leading-relaxed">المساهمة في رصد الأداء الإعلامي وتحليل التفاعل الرقمي للتقرير السنوي.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="img-card"><img src="cma-logo.jfif.jfif" alt="CMA Logo"></div>
-                    <div class="img-card"><img src="cma-1.jfif.jfif" alt="CMA Work"></div>
-                </div>
-            </section>
-
-            <!-- المشاركات المهنية -->
-            <section class="glass p-8">
-                <h3 class="text-2xl font-black mb-6">التمثيل والقيادة</h3>
-                <p class="text-gray-600 mb-8 leading-relaxed">تنظيم الفعاليات والتمثيل الإعلامي في المنتدى السعودي للإعلام.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="img-card"><img src="media-forum-1.jfif.jfif" alt="Media Forum"></div>
-                    <div class="img-card"><img src="criticism-event-1.jfif.jfif" alt="Event"></div>
-                </div>
-            </section>
-        </div>
     </main>
 
-    <footer class="py-20 text-center">
-        <a href="https://www.linkedin.com/in/norah-alnasser-b2026919b" class="bg-teal-600 text-white px-12 py-4 rounded-full font-black shadow-xl inline-block hover:bg-teal-700 transition">LinkedIn Source</a>
+    <footer class="py-20 text-center border-t border-gray-100">
+        <a href="https://www.linkedin.com/in/norah-alnasser-b2026919b" target="_blank" class="eng bg-teal-600 text-white px-16 py-5 rounded-full font-black text-xl hover:bg-teal-500 transition shadow-2xl inline-block uppercase tracking-widest">
+            LinkedIn Profile
+        </a>
+        <p class="mt-12 text-gray-400 text-sm eng uppercase tracking-widest italic opacity-50">© 2026 Norah Alnasser. All Rights Reserved.</p>
     </footer>
 
 </body>

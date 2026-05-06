@@ -3,104 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نورة الناصر | Norah Alnasser</title>
+    <title>نورة الناصر | الملف المهني المتكامل</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Noto+Kufi+Arabic:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Noto+Kufi+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --tiffany: #0abab5; --dark: #064e4b; }
-        body { font-family: 'Noto Kufi Arabic', sans-serif; background-color: #f7fffe; color: var(--dark); margin: 0; }
+        :root { --tiffany: #0abab5; --deep-teal: #053b39; }
+        body { font-family: 'Noto Kufi Arabic', sans-serif; background-color: #fcfdfd; color: var(--deep-teal); }
         .eng { font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        .hero-section { background: linear-gradient(135deg, #0abab5 0%, #064e4b 100%); color: white; padding: 100px 20px; text-align: center; }
-        .card { background: white; border-radius: 2rem; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.03); border: 1px solid #e2f2f1; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--tiffany); }
+        .header-gradient { background: linear-gradient(135deg, #0abab5 0%, #053b39 100%); }
+        .glass-card { background: white; border-radius: 1.5rem; border: 1px solid #eef2f2; box-shadow: 0 10px 30px rgba(0,0,0,0.02); transition: 0.4s; }
+        .glass-card:hover { transform: translateY(-5px); border-color: var(--tiffany); }
         
-        /* حل مشكلة الصور الفارغة: وضع لون خلفية احتياطي */
-        .img-placeholder { background-color: #e2f2f1; border-radius: 1.5rem; overflow: hidden; height: 300px; display: flex; align-items: center; justify-content: center; position: relative; }
-        .img-placeholder img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
-        
-        .badge { background: #e2f2f1; color: var(--tiffany); padding: 5px 15px; border-radius: 10px; font-size: 12px; font-weight: bold; }
+        /* تصميم مخصص للصور لضمان عدم ظهور "فراغ" */
+        .photo-box { background: #f0f7f6; border-radius: 1rem; position: relative; overflow: hidden; min-height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; border: 2px dashed #d1e5e4; }
+        .photo-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; }
+        .photo-label { z-index: 1; font-size: 12px; font-weight: bold; color: var(--tiffany); }
     </style>
 </head>
 <body>
 
-    <header class="hero-section">
-        <div class="eng text-sm font-bold tracking-[0.5em] mb-4 uppercase opacity-80">Media & Journalism Portfolio</div>
-        <h1 class="text-6xl md:text-8xl font-black mb-6">نورة الناصر</h1>
-        <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-            خريجة إعلام وصحافة رقمية من جامعة الأميرة نورة بمرتبة الشرف الثانية.
-        </p>
-        <div class="mt-10 bg-white/10 backdrop-blur-md p-6 rounded-3xl inline-block border border-white/20">
-            <h3 class="eng text-xl font-black mb-2 italic">Creating Impact with Every Beat</h3>
-            <p class="eng text-xs opacity-80">Transforming communication into a strategic force.</p>
+    <!-- Hero Section -->
+    <header class="header-gradient text-white py-24 px-6 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="eng text-sm font-bold tracking-[0.4em] mb-6 opacity-80 uppercase">Portfolio & Professional Profile</div>
+            <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">نورة الناصر</h1>
+            <p class="text-xl md:text-2xl leading-relaxed opacity-90 font-light">
+                خريجة إعلام وصحافة رقمية من جامعة الأميرة نورة بنت عبدالرحمن بمرتبة الشرف الثانية.
+            </p>
+            
+            <div class="mt-12 inline-block bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                <h3 class="eng text-2xl font-black mb-2 italic">Creating Impact with Every Beat</h3>
+                <p class="eng text-sm opacity-80 uppercase tracking-widest">"My mission is to transform communication into a strategic force that echoes professionalism."</p>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-20">
+    <main class="max-w-6xl mx-auto px-6 -mt-16 relative z-20 pb-32">
         
-        <h2 class="text-3xl font-black mb-12 text-center">أبرز المحطات والخبرات</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            
-            <!-- قسم هيئة السوق المالية -->
-            <div class="card">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm">
-                        <img src="cma-logo.jfif" onerror="this.src='https://placehold.co/100x100/0abab5/white?text=CMA'" alt="CMA Logo">
-                    </div>
-                    <div>
-                        <span class="eng text-xs text-teal-500 font-black tracking-widest uppercase">The Strategy</span>
-                        <h3 class="text-2xl font-black text-teal-900">هيئة السوق المالية [CMA]</h3>
-                    </div>
-                </div>
-                <p class="leading-relaxed text-teal-800 mb-6">
-                    ساهمت في صناعة المحتوى الاستراتيجي وحملات التواصل المؤسسي (التقرير السنوي 2024 وبرنامج تأهيل الخريجين)، مع التركيز على التحليل الرقمي ورصد الأداء عبر Meltwater.
-                </p>
-                <div class="grid grid-cols-2 gap-4 mt-6">
-                    <div class="img-placeholder"><img src="cma-1.jfif" alt="CMA Work"></div>
-                    <div class="img-placeholder"><img src="cma-2.jfif" alt="CMA Office"></div>
-                </div>
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="glass-card p-6 text-center">
+                <div class="text-teal-500 font-black text-2xl mb-1">2025</div>
+                <div class="text-xs font-bold text-gray-500">سنة التخرج</div>
             </div>
-
-            <!-- قسم التمثيل والقيادة -->
-            <div class="card">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 bg-teal-500 rounded-xl flex items-center justify-center text-white font-bold">NP</div>
-                    <div>
-                        <span class="eng text-xs text-teal-500 font-black tracking-widest uppercase">The Leadership</span>
-                        <h3 class="text-2xl font-black text-teal-900">التمثيل والقيادة الإعلامية</h3>
-                    </div>
-                </div>
-                <p class="leading-relaxed text-teal-800 mb-6">
-                    قيادة الفرق في ملتقيات النقد الإعلامي واستضافة الشخصيات البارزة، بالإضافة إلى تمثيل الهوية المؤسسية في المنتدى السعودي للإعلام.
-                </p>
-                <div class="grid grid-cols-2 gap-4 mt-6">
-                    <div class="img-placeholder"><img src="criticism-event-1.jfif" alt="Event"></div>
-                    <div class="img-placeholder"><img src="media-forum-1.jfif" alt="Forum"></div>
-                </div>
+            <div class="glass-card p-6 text-center">
+                <div class="text-teal-500 font-black text-2xl mb-1">CMA</div>
+                <div class="text-xs font-bold text-gray-500">التدريب التعاوني</div>
             </div>
-
+            <div class="glass-card p-6 text-center">
+                <div class="text-teal-500 font-black text-2xl mb-1">PNU</div>
+                <div class="text-xs font-bold text-gray-500">مرتبة الشرف</div>
+            </div>
+            <div class="glass-card p-6 text-center">
+                <div class="text-teal-500 font-black text-2xl mb-1">SMF</div>
+                <div class="text-xs font-bold text-gray-500">حضور منتدى الإعلام</div>
+            </div>
         </div>
 
-        <!-- قسم المهارات -->
-        <section class="mt-20 text-center">
-            <h2 class="text-3xl font-black mb-10">المهارات والقدرات</h2>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="badge">صحافة رقمية</span>
-                <span class="badge">إدارة حملات</span>
-                <span class="badge">تحليل Meltwater</span>
-                <span class="badge">صناعة هوية إعلامية</span>
-                <span class="badge eng">Public Relations</span>
-                <span class="badge eng">Content Strategy</span>
-            </div>
-        </section>
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Column 1 & 2: Experience Deep Dive -->
+            <div class="md:col-span-2 space-y-8">
+                <section class="glass-card p-10">
+                    <h2 class="text-3xl font-black mb-8 border-r-4 border-teal-500 pr-4">الخبرة العملية والتدريب</h2>
+                    
+                    <div class="mb-12">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold">هيئة السوق المالية (CMA)</h3>
+                            <span class="eng text-[10px] bg-teal-50 text-teal-600 px-3 py-1 rounded-full font-bold">JAN - MAY 2025</span>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            عملت في إدارة الإعلام والتواصل الرقمي، حيث ساهمت بشكل فعال في صياغة المحتوى الرقمي للتقرير السنوي لعام 2024. تضمن عملي رصد التفاعل الإعلامي باستخدام منصة <b>Meltwater</b> وإعداد التقارير التحليلية التي تدعم صناعة القرار الإعلامي في الهيئة.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="photo-box">
+                                <span class="photo-label eng">CMA WORK SPACE</span>
+                                <img src="cma-1.jfif" alt="Work">
+                            </div>
+                            <div class="photo-box">
+                                <span class="photo-label eng">CMA LOGO</span>
+                                <img src="cma-logo.jfif" alt="Logo">
+                            </div>
+                        </div>
+                    </div>
 
+                    <hr class="my-10 border-teal-50">
+
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">القيادة والتمثيل الإعلامي</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            توليت مهام قيادية في تنظيم ملتقى النقد الإعلامي، بما في ذلك إدارة الجلسات واستقبال كبار الضيوف. كما شاركت في المنتدى السعودي للإعلام بمدينة الرياض، مما عزز مهاراتي في التواصل الجماهيري وبناء الشبكات المهنية في الوسط الإعلامي السعودي.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="photo-box">
+                                <span class="photo-label eng">MEDIA FORUM</span>
+                                <img src="media-forum-1.jfif" alt="Forum">
+                            </div>
+                            <div class="photo-box">
+                                <span class="photo-label eng">EVENT LEADERSHIP</span>
+                                <img src="criticism-event-1.jfif" alt="Event">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Column 3: Sidebar Details -->
+            <div class="space-y-8">
+                <section class="glass-card p-8">
+                    <h3 class="eng text-xs font-black tracking-widest text-teal-500 mb-6 uppercase">Professional Skills</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 font-bold text-sm"> <span class="w-2 h-2 bg-teal-400 rounded-full"></span> الصحافة الاستقصائية الرقمية </li>
+                        <li class="flex items-center gap-3 font-bold text-sm"> <span class="w-2 h-2 bg-teal-400 rounded-full"></span> رصد وتحليل البيانات الإعلامية </li>
+                        <li class="flex items-center gap-3 font-bold text-sm"> <span class="w-2 h-2 bg-teal-400 rounded-full"></span> إدارة الأزمات والاتصال المؤسسي </li>
+                        <li class="flex items-center gap-3 font-bold text-sm"> <span class="w-2 h-2 bg-teal-400 rounded-full"></span> مهارات التحرير باللغتين </li>
+                    </ul>
+                </section>
+
+                <section class="glass-card p-8 bg-teal-50/30">
+                    <h3 class="eng text-xs font-black tracking-widest text-teal-500 mb-6 uppercase">Education</h3>
+                    <p class="font-bold text-teal-900 mb-2">جامعة الأميرة نورة بنت عبدالرحمن</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        بكالوريوس الإعلام الرقمي والصحافة الرقمية <br>
+                        <span class="text-teal-600 font-bold">بمرتبة الشرف الثانية (2025)</span>
+                    </p>
+                </section>
+
+                <div class="photo-box shadow-lg border-none bg-white">
+                    <span class="photo-label eng uppercase">Personal Branding Logo</span>
+                    <img src="profile.jfif" alt="Profile Logo">
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-teal-950 text-white py-20 text-center">
-        <h2 class="text-3xl font-black mb-8 eng">Let's Connect</h2>
-        <a href="https://www.linkedin.com/in/norah-alnasser-b2026919b" target="_blank" class="bg-teal-500 text-white px-12 py-4 rounded-full font-black hover:bg-white hover:text-teal-900 transition shadow-xl inline-block">LinkedIn Profile</a>
-        <p class="mt-10 opacity-30 eng text-xs italic">Crafted by Norah Alnasser © 2026</p>
+    <footer class="py-20 text-center">
+        <a href="https://www.linkedin.com/in/norah-alnasser-b2026919b" target="_blank" class="bg-teal-600 text-white px-16 py-5 rounded-full font-black text-xl hover:bg-teal-700 transition shadow-2xl inline-block eng uppercase tracking-widest">
+            Connect via LinkedIn
+        </a>
+        <p class="mt-12 text-gray-400 eng text-[10px] tracking-widest uppercase italic">© 2026 Norah Alnasser. All Rights Reserved.</p>
     </footer>
 
 </body>

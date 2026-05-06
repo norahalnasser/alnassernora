@@ -3,97 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norah Alnasser | Digital Impact Portfolio</title>
+    <title>نورة الناصر | Norah Alnasser</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Noto+Kufi+Arabic:wght@400;900&display=swap" rel="stylesheet">
     <style>
-        :root { --tiffany: #0abab5; --dark-teal: #064e4b; }
-        body { font-family: 'Noto Kufi Arabic', sans-serif; background-color: #f7fffe; color: var(--dark-teal); }
+        :root { --tiffany: #0abab5; --dark: #064e4b; }
+        body { font-family: 'Noto Kufi Arabic', sans-serif; background-color: #f7fffe; color: var(--dark); margin: 0; }
         .eng { font-family: 'Plus Jakarta Sans', sans-serif; }
-
-        /* تأثير الحركة للصور (Interactive Zoom) */
-        .img-container { overflow: hidden; border-radius: 2rem; position: relative; border: 4px solid white; transition: 0.5s; }
-        .img-container:hover { transform: translateY(-10px) rotate(1deg); border-color: var(--tiffany); box-shadow: 0 30px 60px rgba(10, 186, 181, 0.2); }
-        .img-container img { transition: 0.6s; width: 100%; height: 100%; object-fit: cover; }
-        .img-container:hover img { transform: scale(1.1); }
-
-        /* البطاقات الشفافة (Frosted Glass) */
-        .glass { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); border-radius: 2.5rem; border: 1px solid white; transition: 0.4s; }
-        .glass:hover { background: rgba(255, 255, 255, 0.9); }
-
-        /* تأثير النص "التأثير والصدى" */
-        .impact-text { background: linear-gradient(to right, var(--tiffany), var(--dark-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .hero-section { background: linear-gradient(135deg, #0abab5 0%, #064e4b 100%); color: white; padding: 100px 20px; text-align: center; }
+        .card { background: white; border-radius: 2rem; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.03); border: 1px solid #e2f2f1; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--tiffany); }
+        
+        /* حل مشكلة الصور الفارغة: وضع لون خلفية احتياطي */
+        .img-placeholder { background-color: #e2f2f1; border-radius: 1.5rem; overflow: hidden; height: 300px; display: flex; align-items: center; justify-content: center; position: relative; }
+        .img-placeholder img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
+        
+        .badge { background: #e2f2f1; color: var(--tiffany); padding: 5px 15px; border-radius: 10px; font-size: 12px; font-weight: bold; }
     </style>
 </head>
-<body class="selection:bg-teal-100">
+<body>
 
-    <!-- Header / Navbar -->
-    <nav class="p-8 flex justify-between items-center sticky top-0 z-50 backdrop-blur-md">
-        <div class="eng font-black text-2xl tracking-tighter impact-text">NORAH ALNASSER</div>
-        <a href="https://www.linkedin.com/in/norah-alnasser-b2026919b" target="_blank" class="eng text-xs font-extrabold tracking-widest px-6 py-3 bg-white rounded-full shadow-sm hover:shadow-md transition">LINKEDIN SOURCE</a>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="py-20 px-6 text-center">
-        <div class="eng text-teal-500 font-bold tracking-[0.6em] mb-4 text-xs uppercase">Visionary Media Professional</div>
-        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight">نورة الناصر</h1>
-        <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-teal-700/80">
-            خريجة إعلام وصحافة رقمية بمرتبة الشرف الثانية. أصنع محتوىً لا يكتفي بنقل المعلومة، بل يترك أثراً مستداماً وصدىً مهنياً.
+    <header class="hero-section">
+        <div class="eng text-sm font-bold tracking-[0.5em] mb-4 uppercase opacity-80">Media & Journalism Portfolio</div>
+        <h1 class="text-6xl md:text-8xl font-black mb-6">نورة الناصر</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+            خريجة إعلام وصحافة رقمية من جامعة الأميرة نورة بمرتبة الشرف الثانية.
         </p>
-        
-        <!-- عبارة التأثير بالإنجليزية -->
-        <div class="mt-12 glass p-8 max-w-2xl mx-auto">
-            <h3 class="eng text-2xl font-black mb-2 impact-text">Creating Impact with Every Beat</h3>
-            <p class="eng text-sm opacity-70 italic">"My mission is to transform communication into a strategic force that echoes professionalism and creativity across digital landscapes."</p>
+        <div class="mt-10 bg-white/10 backdrop-blur-md p-6 rounded-3xl inline-block border border-white/20">
+            <h3 class="eng text-xl font-black mb-2 italic">Creating Impact with Every Beat</h3>
+            <p class="eng text-xs opacity-80">Transforming communication into a strategic force.</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 pb-32">
+    <main class="max-w-7xl mx-auto px-6 py-20">
         
-        <!-- Gallery Grid (Using your new names) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            <div class="img-container h-80"><img src="gallery/cma-1.jfif" alt="Work at CMA"></div>
-            <div class="img-container h-80 md:mt-12"><img src="gallery/media-forum-1.jfif" alt="Saudi Media Forum"></div>
-            <div class="img-container h-80"><img src="gallery/criticism-event-1.jfif" alt="Criticism Event Leading"></div>
-            <div class="img-container h-80"><img src="gallery/council-meeting-session.jfif" alt="Council Meeting"></div>
-            <div class="img-container h-80 md:mt-12"><img src="gallery/uni-group-graduation.jfif" alt="Graduation Day"></div>
-            <div class="img-container h-80"><img src="gallery/design-council-initiative.jfif" alt="Design Initiatives"></div>
-        </div>
+        <h2 class="text-3xl font-black mb-12 text-center">أبرز المحطات والخبرات</h2>
 
-        <!-- Experience & Achievements -->
-        <section class="grid md:grid-cols-2 gap-10">
-            <div class="glass p-12">
-                <span class="eng text-teal-500 font-black text-[10px] tracking-widest uppercase">The Strategy</span>
-                <h3 class="text-3xl font-black mt-4 mb-6">هيئة السوق المالية [CMA]</h3>
-                <p class="leading-relaxed mb-8">
-                    المساهمة في صناعة المحتوى الإعلامي الاستراتيجي وحملات التواصل المؤسسي، مع التركيز على التحليل الرقمي وقياس الأداء.
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <!-- قسم هيئة السوق المالية -->
+            <div class="card">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm">
+                        <img src="cma-logo.jfif" onerror="this.src='https://placehold.co/100x100/0abab5/white?text=CMA'" alt="CMA Logo">
+                    </div>
+                    <div>
+                        <span class="eng text-xs text-teal-500 font-black tracking-widest uppercase">The Strategy</span>
+                        <h3 class="text-2xl font-black text-teal-900">هيئة السوق المالية [CMA]</h3>
+                    </div>
+                </div>
+                <p class="leading-relaxed text-teal-800 mb-6">
+                    ساهمت في صناعة المحتوى الاستراتيجي وحملات التواصل المؤسسي (التقرير السنوي 2024 وبرنامج تأهيل الخريجين)، مع التركيز على التحليل الرقمي ورصد الأداء عبر Meltwater.
                 </p>
-                <div class="flex gap-4">
-                    <div class="h-12 w-12"><img src="gallery/cma-logo.jfif" class="rounded-lg shadow-sm" alt="CMA Logo"></div>
-                    <div class="h-12 w-12"><img src="gallery/cma-2.jfif" class="rounded-lg shadow-sm" alt="CMA Office"></div>
+                <div class="grid grid-cols-2 gap-4 mt-6">
+                    <div class="img-placeholder"><img src="cma-1.jfif" alt="CMA Work"></div>
+                    <div class="img-placeholder"><img src="cma-2.jfif" alt="CMA Office"></div>
                 </div>
             </div>
 
-            <div class="glass p-12">
-                <span class="eng text-teal-500 font-black text-[10px] tracking-widest uppercase">The Leadership</span>
-                <h3 class="text-3xl font-black mt-4 mb-6">التمثيل والقيادة</h3>
-                <p class="leading-relaxed mb-6">
-                    قيادة الفرق في ملتقيات النقد الإعلامي وتمثيل الهوية المؤسسية في المنتديات الكبرى كشخصية إعلامية واعدة.
-                </p>
-                <div class="flex gap-2">
-                    <span class="bg-teal-50 text-teal-600 px-4 py-2 rounded-full text-xs font-bold eng">EVENT MANAGEMENT</span>
-                    <span class="bg-teal-50 text-teal-600 px-4 py-2 rounded-full text-xs font-bold eng">PUBLIC SPEAKING</span>
+            <!-- قسم التمثيل والقيادة -->
+            <div class="card">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 bg-teal-500 rounded-xl flex items-center justify-center text-white font-bold">NP</div>
+                    <div>
+                        <span class="eng text-xs text-teal-500 font-black tracking-widest uppercase">The Leadership</span>
+                        <h3 class="text-2xl font-black text-teal-900">التمثيل والقيادة الإعلامية</h3>
+                    </div>
                 </div>
+                <p class="leading-relaxed text-teal-800 mb-6">
+                    قيادة الفرق في ملتقيات النقد الإعلامي واستضافة الشخصيات البارزة، بالإضافة إلى تمثيل الهوية المؤسسية في المنتدى السعودي للإعلام.
+                </p>
+                <div class="grid grid-cols-2 gap-4 mt-6">
+                    <div class="img-placeholder"><img src="criticism-event-1.jfif" alt="Event"></div>
+                    <div class="img-placeholder"><img src="media-forum-1.jfif" alt="Forum"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- قسم المهارات -->
+        <section class="mt-20 text-center">
+            <h2 class="text-3xl font-black mb-10">المهارات والقدرات</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="badge">صحافة رقمية</span>
+                <span class="badge">إدارة حملات</span>
+                <span class="badge">تحليل Meltwater</span>
+                <span class="badge">صناعة هوية إعلامية</span>
+                <span class="badge eng">Public Relations</span>
+                <span class="badge eng">Content Strategy</span>
             </div>
         </section>
 
     </main>
 
-    <footer class="py-20 text-center border-t border-teal-50">
-        <h2 class="text-3xl font-black mb-8 eng tracking-tighter">Ready to Make an Impact?</h2>
-        <a href="https://www.linkedin.com/in/norah-alnasser-b2026919b" target="_blank" class="bg-teal-600 text-white px-16 py-5 rounded-full font-black text-xl hover:bg-teal-500 transition shadow-2xl inline-block">
-            Connect via LinkedIn
-        </a>
+    <footer class="bg-teal-950 text-white py-20 text-center">
+        <h2 class="text-3xl font-black mb-8 eng">Let's Connect</h2>
+        <a href="https://www.linkedin.com/in/norah-alnasser-b2026919b" target="_blank" class="bg-teal-500 text-white px-12 py-4 rounded-full font-black hover:bg-white hover:text-teal-900 transition shadow-xl inline-block">LinkedIn Profile</a>
+        <p class="mt-10 opacity-30 eng text-xs italic">Crafted by Norah Alnasser © 2026</p>
     </footer>
 
 </body>
